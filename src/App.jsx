@@ -1,3 +1,5 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import React, { useState } from "react";
 import './styles/styles.css';
 
