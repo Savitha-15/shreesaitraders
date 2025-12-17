@@ -772,3 +772,43 @@ section p {
   transform: translateY(-6px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
+.page-container {
+  animation: pageFade 0.6s ease-in-out;
+}
+
+@keyframes pageFade {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+button {
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+.carousel-quote {
+  background: rgba(0,0,0,0.55);
+  padding: 12px 20px;
+  border-radius: 8px;
+  color: #fff;
+  max-width: 90%;
+  margin: auto;
+}
+body {
+  animation: fadeLoad 0.8s ease;
+}
+
+@keyframes fadeLoad {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
