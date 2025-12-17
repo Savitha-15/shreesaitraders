@@ -14,6 +14,19 @@ import Contact from "./pages/Contact.jsx";
 
 export default function App() {
   const [route, setRoute] = useState("home");
+  useEffect(() => {
+    AOS.init({
+      duration: 900,
+      easing: "ease-out",
+      once: true,
+    });
+  }, []);
+
+  // 🔥 THIS IS THE FIX
+  useEffect(() => {
+    AOS.refresh();
+  }, [route]);
+
 
   return (
     <>
