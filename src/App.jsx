@@ -14,14 +14,14 @@ import Contact from "./pages/Contact.jsx";
 
 export default function App() {
   const [route, setRoute] = useState("home");
+
   useEffect(() => {
     AOS.init({
-      duration: 900,
-      easing: "ease-out",
+      duration: 1000,
       once: true,
+      easing: "ease-in-out",
     });
   }, []);
-
   // 🔥 THIS IS THE FIX
   useEffect(() => {
     AOS.refresh();
