@@ -13,12 +13,14 @@ export default function Products() {
 
   return (
     <div className="page-container">
-      <h1 className="section-title" data-aos="fade-up">Our Products</h1>
+      <h1 className="section-title">Our Products</h1>
 
       <div className="product-grid">
         {products.map((item, index) => (
-          <div className="product-card" key={index} data-aos="zoom-in" data-aos-delay={index * 100}>
-            <img src={item.img} alt={item.name} className="product-img" />
+          <div className="product-card" key={index}>
+            <div className="product-img-wrapper">
+              <img src={item.img} alt={item.name} className="product-img" />
+            </div>
             <h3>{item.name}</h3>
             <p>{item.desc}</p>
           </div>

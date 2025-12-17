@@ -12,18 +12,15 @@ export default function Brands() {
 
   return (
     <div className="page-container">
-      <h1 className="section-title" data-aos="fade-up">Our Brands</h1>
+      <h1 className="section-title">Our Brands</h1>
 
       <div className="brands-wrapper">
         {brandCategories.map((item, index) => (
-          <div className="brand-category-box" key={index} data-aos="fade-up" data-aos-delay={index * 150}>
+          <div className="brand-category-box" key={index}>
             <h2 className="brand-category-title">{item.category}</h2>
-
             <div className="brand-items-grid">
               {item.brands.map((brand, i) => (
-                <div className="brand-item" key={i} data-aos="zoom-in">
-                  {brand}
-                </div>
+                <div className="brand-item" key={i}>{brand}</div>
               ))}
             </div>
           </div>
