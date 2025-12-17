@@ -1,7 +1,7 @@
+import React, { useState, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import React, { useState } from "react";
-import './styles/styles.css';
+import "./styles/styles.css";
 
 import Header from "./components/Header.jsx";
 import Footer from "./components/Footer.jsx";
@@ -22,11 +22,10 @@ export default function App() {
       easing: "ease-in-out",
     });
   }, []);
-  // 🔥 THIS IS THE FIX
+
   useEffect(() => {
     AOS.refresh();
   }, [route]);
-
 
   return (
     <>
@@ -36,7 +35,6 @@ export default function App() {
       {route === "about" && <About />}
       {route === "products" && <Products />}
       {route === "brands" && <Brands />}
-      {route === "services" && <Services />}
       {route === "contact" && <Contact />}
 
       <Footer />

@@ -765,7 +765,7 @@ section p {
 
 /* Card hover (light & mobile safe) */
 .build-box {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .build-box:hover {
