@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi"; // Hamburger and close icons
-import "./Header.css"; // We'll add animation CSS here
 
 export default function Header({ setRoute }) {
   const [menuOpen, setMenuOpen] = useState(false);
