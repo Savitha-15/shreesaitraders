@@ -1,102 +1,32 @@
 import React from "react";
+import "../styles/styles.css";
 
 export default function Contact() {
   return (
     <div className="contact-container">
 
-      <h1 className="contact-title">Contact Us</h1>
-      <p className="contact-subtitle">
+      <h1 className="contact-title" data-aos="fade-down">Contact Us</h1>
+      <p className="contact-subtitle" data-aos="fade-up">
         We are here to assist you with all your construction material needs.
       </p>
 
       <div className="contact-wrapper">
 
-        {/* LEFT SIDE – CONTACT INFO */}
-        <div className="contact-info">
+        <div className="contact-info" data-aos="fade-right">
           <h2>Get in Touch</h2>
-
           <p><strong>Phone:</strong> +91 9976943630</p>
-          <p>
-            <strong>Email:</strong>{" "}
-            <a href="mailto:shreesaitraderskpm@gmail.com">
-              shreesaitraderskpm@gmail.com
-            </a>
-          </p>
-          <p>
-            <strong>Instagram:</strong>{" "}
-            <a
-              href="https://www.instagram.com/shreesaitraders_?igsh=dGk3YjNiNDJkdW40"
-              target="_blank"
-              rel="noreferrer"
-            >
-              shreesaitraders_
-            </a>
-          </p>
-          <p>
-            <strong>Facebook:</strong>{" "}
-            <a
-              href="https://www.facebook.com/share/14TPgdTpcTw/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Facebook
-            </a>
-          </p>
-
-          <p>
-            <strong>Address:</strong><br />
-            No.163, Vedapatti Road, Krishnapura (Post),<br />
-            Madathukulam (TK), Tamil Nadu.
-          </p>
-
-          <h3>Business Hours</h3>
-          <p>Monday – Saturday: 9:00 AM – 8:00 PM</p>
-          <p>Sunday: Closed</p>
+          <p><strong>Email:</strong> shreesaitraderskpm@gmail.com</p>
+          <p><strong>Address:</strong><br />No.163, Vedapatti Road, Krishnapura (Post), Madathukulam (TK), Tamil Nadu.</p>
         </div>
 
-        {/* RIGHT SIDE – CONTACT FORM */}
-        <div className="contact-form">
+        <div className="contact-form" data-aos="fade-left">
           <h2>Send Us a Message</h2>
 
-          <form
-            action="https://formspree.io/f/mvgeekao"
-            method="POST"
-          >
-            {/* Optional but recommended */}
-            <input
-              type="hidden"
-              name="_subject"
-              value="New Contact Form Submission"
-            />
-
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              required
-            />
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              required
-            />
-
-            <input
-              type="text"
-              name="phone"
-              placeholder="Phone Number"
-              required
-            />
-
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="5"
-              required
-            ></textarea>
-
+          <form action="https://formspree.io/f/mvgeekao" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input type="email" name="email" placeholder="Email Address" required />
+            <input type="text" name="phone" placeholder="Phone Number" required />
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
             <button type="submit">Submit</button>
           </form>
         </div>

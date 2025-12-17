@@ -9,7 +9,6 @@ export default function About() {
       <section className="about-hero">
         <h1>About ShreeSaiTraders</h1>
         <br></br>
-        <br></br>
         <p>
           We are a trusted supplier of premium construction materials, delivering quality,
           reliability, and unmatched customer service for all residential and commercial projects.
