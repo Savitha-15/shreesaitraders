@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Header({ setRoute }) {
   const [open, setOpen] = useState(false);
 
-  const go = (page) => {
+  const goTo = (page) => {
     setRoute(page);
     setOpen(false);
   };
@@ -13,28 +12,30 @@ export default function Header({ setRoute }) {
     <header className="header">
       <h2 className="logo">ShreeSaiTraders</h2>
 
-      {/* Desktop menu */}
+      {/* Desktop Menu */}
       <nav className="nav-desktop">
-        <button onClick={() => go("home")}>Home</button>
-        <button onClick={() => go("about")}>About</button>
-        <button onClick={() => go("products")}>Products</button>
-        <button onClick={() => go("brands")}>Brands</button>
-        <button onClick={() => go("contact")}>Contact</button>
+        <button onClick={() => goTo("home")}>Home</button>
+        <button onClick={() => goTo("about")}>About</button>
+        <button onClick={() => goTo("products")}>Products</button>
+        <button onClick={() => goTo("brands")}>Brands</button>
+        <button onClick={() => goTo("contact")}>Contact</button>
       </nav>
 
-      {/* Hamburger */}
+      {/* Hamburger Icon */}
       <div className="hamburger" onClick={() => setOpen(!open)}>
-        {open ? <FaTimes /> : <FaBars />}
+        <span className={open ? "line open" : "line"}></span>
+        <span className={open ? "line open" : "line"}></span>
+        <span className={open ? "line open" : "line"}></span>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile Menu */}
       {open && (
         <div className="nav-mobile">
-          <button onClick={() => go("home")}>Home</button>
-          <button onClick={() => go("about")}>About</button>
-          <button onClick={() => go("products")}>Products</button>
-          <button onClick={() => go("brands")}>Brands</button>
-          <button onClick={() => go("contact")}>Contact</button>
+          <button onClick={() => goTo("home")}>Home</button>
+          <button onClick={() => goTo("about")}>About</button>
+          <button onClick={() => goTo("products")}>Products</button>
+          <button onClick={() => goTo("brands")}>Brands</button>
+          <button onClick={() => goTo("contact")}>Contact</button>
         </div>
       )}
     </header>
