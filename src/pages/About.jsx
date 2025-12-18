@@ -6,7 +6,7 @@ export default function About() {
     <div className="about-page">
 
       {/* HEADER SECTION */}
-      <section className="about-hero">
+     <section className="about-hero fade-slide">
         <h1>About ShreeSaiTraders</h1>
         <br></br>
         <p>
@@ -17,7 +17,7 @@ export default function About() {
 
 
       {/* OUR STORY */}
-      <section className="about-section">
+    <section className="about-content fade-slide fade-delay-1">
         <h2 className="section-heading">Our Story</h2>
 
         <div className="about-grid">

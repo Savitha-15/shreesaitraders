@@ -12,12 +12,18 @@ export default function Products() {
   ];
 
   return (
-    <div className="page-container">
-      <h1 className="section-title">Our Products</h1>
+    <div className="page-container fade-slide">
+      <h1 className="section-title fade-slide fade-delay-1">
+        Our Products
+      </h1>
 
       <div className="product-grid">
         {products.map((item, index) => (
-          <div className="product-card" key={index}>
+          <div
+            className="product-card fade-slide"
+            style={{ animationDelay: `${index * 0.15}s` }}
+            key={index}
+          >
             <div className="product-img-wrapper">
               <img src={item.img} alt={item.name} className="product-img" />
             </div>

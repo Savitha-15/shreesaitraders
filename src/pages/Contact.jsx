@@ -16,8 +16,28 @@ export default function Contact() {
           <h2>Get in Touch</h2>
           <p><strong>Phone:</strong> +91 9976943630</p>
           <p><strong>Email:</strong> shreesaitraderskpm@gmail.com</p>
-          <p><strong>Instagram:</strong></p>
-          <p><strong>Facebook:</strong></p>
+          <p>
+  <strong>Instagram:</strong>{" "}
+  <a
+    href="https://www.instagram.com/shreesaitraders_?igsh=dGk3YjNiNDJkdW40"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    shreesaitraders_
+  </a>
+</p>
+
+<p>
+  <strong>Facebook:</strong>{" "}
+  <a
+    href="https://www.facebook.com/share/14TPgdTpcTw/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    ShreeSai Traders
+  </a>
+</p>
+
           <p><strong>Address:</strong><br />No.163, Vedapatti Road, Krishnapura (Post), Madathukulam (TK), Tamil Nadu.</p>
         </div>
 
