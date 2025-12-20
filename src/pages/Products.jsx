@@ -1,37 +1,90 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "../styles/styles.css";
 
 export default function Products() {
   const products = [
-    { name: "Steels", desc: "High-quality TMT bars and steel rods suitable for all construction work.", img: "/assets/product-steel.jpg" },
-    { name: "Pipes", desc: "PVC, GI and MS pipes perfect for plumbing and industrial use.", img: "/assets/product-pipe.jpg" },
-    { name: "Roofing", desc: "Weatherproof roofing sheets with long life and durability.", img: "/assets/product-roof.jpg" },
-    { name: "Sheets", desc: "Metal, fiber and polycarbonate sheets used for roofing and industrial covering.", img: "/assets/product-sheet.jpeg" },
-    { name: "Cements", desc: "Top-grade cement for strong foundations and building structures.", img: "/assets/product-cement.jpeg" },
-    { name: "Cutter", desc: "High-performance cutting tools and machines for precise and smooth construction work.", img: "/assets/product-cutter.jpeg" }
+    {
+      name: "Cement",
+      desc: "Top-grade cement for strong foundations and durable structures.",
+      img: "/assets/product-cement.jpeg",
+      slug: "cement",
+    },
+    {
+      name: "Steel",
+      desc: "High-quality TMT bars and steel rods for all construction works.",
+      img: "/assets/product-steel.jpg",
+      slug: "steel",
+    },
+    {
+      name: "Sheet",
+      desc: "Metal, fiber and polycarbonate sheets for roofing solutions.",
+      img: "/assets/product-sheet.jpeg",
+      slug: "sheet",
+    },
+    {
+      name: "Cutter",
+      desc: "High-performance cutting tools for precision construction work.",
+      img: "/assets/product-cutter.jpeg",
+      slug: "cutter",
+    },
+    {
+      name: "Roof",
+      desc: "Weatherproof roofing sheets with long-lasting durability.",
+      img: "/assets/product-roof.jpg",
+      slug: "roof",
+    },
+    {
+      name: "Pipe",
+      desc: "PVC, GI and MS pipes suitable for plumbing and industrial use.",
+      img: "/assets/product-pipe.jpg",
+      slug: "pipe",
+    },
   ];
 
   return (
-    <div className="page-container fade-slide">
-      <h1 className="section-title fade-slide fade-delay-1">
+    <section className="products-wrapper">
+      <motion.h2
+        className="products-title"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
         Our Products
-      </h1>
+      </motion.h2>
 
-      <div className="product-grid">
-        {products.map((item, index) => (
-          <div
-            className="product-card fade-slide"
-            style={{ animationDelay: `${index * 0.15}s` }}
-            key={index}
+      <div className="products-grid">
+        {products.map((p, i) => (
+          <motion.div
+            className="product-card"
+            key={i}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
+            whileHover={{ y: -12 }}
           >
-            <div className="product-img-wrapper">
-              <img src={item.img} alt={item.name} className="product-img" />
+            <div className="product-image">
+              <img src={p.img} alt={p.name} />
             </div>
-            <h3>{item.name}</h3>
-            <p>{item.desc}</p>
-          </div>
+
+            <div className="product-info">
+              <h3>{p.name}</h3>
+              <p>{p.desc}</p>
+
+              <div className="product-actions">
+                <Link to={`/brands/${p.slug}`} className="btn-outline">
+                  View Brands
+                </Link>
+
+                <Link to="/contactform" className="btn-primary">
+                  Enquire Now
+                </Link>
+              </div>
+            </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

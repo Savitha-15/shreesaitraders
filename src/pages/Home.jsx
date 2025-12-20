@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Products from "./Products";
+
 
 // Slides
 const slides = [
   { image: "/assets/slide1.jpg", quote: "Building quality that lasts a lifetime." },
-  { image: "/assets/slide2.jpg", quote: "Your trusted partner in construction materials." },
-  { image: "/assets/slide3.jpg", quote: "Strength, durability, and reliability." },
-  { image: "/assets/slide4.jpg", quote: "Materials that shape your dreams." }
+  { image: "/assets/slide2.jpeg", quote: "Your trusted partner in construction materials." },
+  { image: "/assets/slide3.jpeg", quote: "Strength, durability, and reliability." },
+  { image: "/assets/slide4.jpeg", quote: "Materials that shape your dreams." }
 ];
 
 export default function Home() {
@@ -56,14 +59,6 @@ export default function Home() {
         </h2>
 
         <div className="work-section">
-
-          <img
-            src="/assets/world-map.jpg"
-            alt="World Map"
-            className="work-map"
-            data-aos="zoom-in"
-          />
-
           <div className="work-stats">
 
             <div className="work-box" data-aos="fade-up">
@@ -91,32 +86,45 @@ export default function Home() {
 
         <br /><br />
 
-        {/* WHAT WE BUILD */}
-        <h2 className="section-title" data-aos="fade-up">
-          What We Build
-        </h2>
+        {/* =================== SERVICES =================== */}
+        <h2 className="section-title" data-aos="fade-up">Our Services</h2>
+        <p className="section-text" data-aos="fade-up" data-aos-delay="150">
+          We provide complete construction material supply and roofing solutions for residential, commercial, and industrial projects.
+          Our services include the supply of roofing sheets, pipes, rods, cement, and other essential construction materials, ensuring quality and reliability.
+          In addition, we offer professional roofing services using Tata roofing sheets, delivering durable, weather-resistant, and well-finished roofing systems.
+          From material supply to installation, our team ensures proper workmanship and timely project completion.
+        </p>
 
-        <div className="build-list">
+        <br /><br />
 
-          {[
-            ["Cement", "High-strength cement for durable construction."],
-            ["Steel", "Premium TMT bars and structural steel."],
-            ["Roofing", "Durable roofing sheets with long life."],
-            ["Pipes", "Reliable PVC, GI and MS pipes."],
-            ["Sheets", "High-grade metal and fiber sheets."]
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="build-box"
-              data-aos="zoom-in-up"
-              data-aos-delay={index * 100}
-            >
-              <h3>{item[0]}</h3>
-              <p>{item[1]}</p>
-            </div>
-          ))}
+    {/* =================== PRODUCTS =================== */}
+<div className="section-title" data-aos="fade-up">
+<Products />
+</div>
+        <br /><br />
 
-        </div>
+        {/* =================== CONTACT =================== */}
+        <h2 className="section-title" data-aos="fade-up">Contact Us</h2>
+        <p className="section-text" data-aos="fade-up" data-aos-delay="150">
+          {/* You can keep your existing contact content or form here */}
+        <section className="contact-cta">
+  <div className="cta-content">
+    <h2>Let’s Build Something Strong Together</h2>
+    <p>
+      Have questions about our products or need expert guidance?
+      Our team is ready to help you.
+    </p>
+
+
+<Link to="/contact" className="cta-link">
+ <button className="cta-btn"
+ > Contact Us</button>
+</Link>
+  </div>
+</section>
+
+
+        </p>
 
       </div>
     </div>

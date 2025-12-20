@@ -1,41 +1,37 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import "./styles/styles.css";
+import { useEffect } from "react";
 
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import Products from "./pages/Products.jsx";
-import Brands from "./pages/Brands.jsx";
-import Contact from "./pages/Contact.jsx";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Products from "./pages/Products";
+import Brands from "./pages/Brands";
+import Contact from "./pages/Contact";
+import ContactForm from "./pages/ContactForm";
 
 export default function App() {
-  const [route, setRoute] = useState("home");
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: "ease-in-out",
-    });
+    AOS.init({ duration: 1000, once: true });
   }, []);
-
-  useEffect(() => {
-    AOS.refresh();
-  }, [route]);
 
   return (
     <>
-      <Header setRoute={setRoute} />
+      <Header />
 
-      {route === "home" && <Home />}
-      {route === "about" && <About />}
-      {route === "products" && <Products />}
-      {route === "brands" && <Brands />}
-      {route === "contact" && <Contact />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/brands" element={<Brands />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/contactform" element={<ContactForm/>} />
+      </Routes>
 
       <Footer />
     </>
