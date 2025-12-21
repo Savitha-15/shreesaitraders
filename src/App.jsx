@@ -5,7 +5,6 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -50,8 +49,6 @@ export default function App() {
 <Route path="/brands/:slug" element={<BrandDetails />} />
 
       </Routes>
-
-      <Footer />
     </>
   );
 }

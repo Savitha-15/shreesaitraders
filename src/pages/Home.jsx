@@ -40,9 +40,12 @@ export default function Home() {
       <div className="page-container">
 
         {/* ABOUT */}
-        <h1 className="section-title" data-aos="fade-up">
-          Welcome to ShreeSaiTraders
-        </h1>
+ <h2 className="welcome-title" data-aos="fade-up" data-aos-duration="900">
+  Welcome to ShreeSaiTraders
+</h2>
+
+
+
 
         <p className="section-text" data-aos="fade-up" data-aos-delay="150">
           ShreeSaiTraders is a reliable supplier of high-quality construction materials,
