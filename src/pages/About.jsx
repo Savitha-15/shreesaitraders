@@ -46,7 +46,8 @@ export default function About() {
           </div>
         </div>
       </section>
-
+<br></br>
+<br></br>
       {/* WHAT WE DO */}
       <section className="about-section">
         <h2 className="section-heading">What We Do</h2>
@@ -74,7 +75,8 @@ export default function About() {
           </div>
         </div>
       </section>
-
+<br></br>
+<br></br>
       {/* OUR VALUES */}
       <section className="about-section">
         <h2 className="section-heading">Our Values</h2>

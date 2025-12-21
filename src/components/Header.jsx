@@ -12,6 +12,12 @@ export default function Header() {
 
   return (
     <header className="header">
+      <img
+  src="/assets/sst-logo.jpeg"
+  alt="Shree Sai Traders"
+  className="logo"
+/>
+
       <h2 className="logo">ShreeSaiTraders</h2>
 
       {/* Desktop Menu */}
@@ -24,13 +30,14 @@ export default function Header() {
       </nav>
 
       {/* Hamburger Icon (Mobile) */}
-      <button
-        className="hamburger"
-        onClick={() => setOpen(!open)}
-        aria-label="Menu"
-      >
-        {open ? "✕" : "☰"}
-      </button>
+     <button
+  className="hamburger"
+  onClick={() => setOpen(!open)}
+  aria-label="Menu"
+>
+  ☰
+</button>
+
 
       {/* Mobile Menu OPTIONS */}
       {open && (

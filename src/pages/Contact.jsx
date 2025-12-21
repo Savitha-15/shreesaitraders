@@ -4,8 +4,9 @@ import "../styles/styles.css";
 export default function Contact() {
   return (
     <div className="contact-container">
-
+<centre>
       <h1 className="contact-title" data-aos="fade-down">Contact Us</h1>
+      </centre>
       <p className="contact-subtitle" data-aos="fade-up">
         We are here to assist you with all your construction material needs.
       </p>
