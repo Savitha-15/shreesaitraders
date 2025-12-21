@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <header className="header">
       <img
-  src="/assets/sst-logo.jpeg"
+  src="/assets/sst-logo.png"
   alt="Shree Sai Traders"
   className="logo"
 />

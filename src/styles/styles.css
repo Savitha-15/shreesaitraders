@@ -1521,3 +1521,154 @@ body {
     display: block;
   }
 }
+:root {
+  --primary: #dfe7f1;
+  --secondary: #D4AF6A;
+  --white: #ffffff;
+  --light-bg: #F5F7FA;
+  --text-dark: #1F2937;
+  --text-muted: #6B7280;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  color: #1F2937;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #081E3A;
+}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p, li {
+  font-size: 1rem;
+  color: #374151;
+}
+
+
+header, .navbar {
+  background-color: var(--primary);
+}
+header a, .navbar a {
+  color: var(--white);
+}
+button, .btn, .btn-primary {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+.section {
+  background-color: var(--light-bg);
+  padding: 60px 20px;
+}
+.logo {
+  color: #ffffff !important;
+}
+/* ================= CONTACT SECTION ================= */
+
+.contact-wrapper {
+  background-color: #ffffff;
+  padding: 60px 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.contact-info {
+  max-width: 600px;
+  animation: fadeSlide 0.8s ease-in-out;
+}
+
+.contact-info h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  color: #081E3A;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+/* underline accent */
+.contact-info h2::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background-color: #D4AF6A;
+  display: block;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+/* text */
+.contact-info p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  color: #374151;
+  line-height: 1.9;
+  margin-bottom: 14px;
+}
+
+/* labels */
+.contact-info strong {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* links */
+.contact-info a {
+  color: #081E3A;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* underline animation */
+.contact-info a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: #D4AF6A;
+  transition: width 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #D4AF6A;
+}
+
+.contact-info a:hover::after {
+  width: 100%;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    padding: 40px 20px;
+  }
+
+  .contact-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+  }
+}

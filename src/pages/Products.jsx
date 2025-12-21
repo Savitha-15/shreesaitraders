@@ -30,12 +30,6 @@ export default function Products() {
       slug: "cutter",
     },
     {
-      name: "Roof",
-      desc: "Weatherproof roofing sheets with long-lasting durability.",
-      img: "/assets/product-roof.jpg",
-      slug: "roof",
-    },
-    {
       name: "Pipe",
       desc: "PVC, GI and MS pipes suitable for plumbing and industrial use.",
       img: "/assets/product-pipe.jpg",

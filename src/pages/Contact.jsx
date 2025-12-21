@@ -16,7 +16,8 @@ export default function Contact() {
         <div className="contact-info" data-aos="fade-right">
           <h2>Get in Touch</h2>
           <p><strong>Phone:</strong> +91 9976943630</p>
-          <p><strong>Email:</strong> shreesaitraderskpm@gmail.com</p>
+          <p><strong>Email:</strong>     <a href="mailto:shreesaitraderskpm@gmail.com">
+        shreesaitraderskpm@gmail.com</a> </p>
           <p>
   <strong>Instagram:</strong>{" "}
   <a
@@ -39,7 +40,7 @@ export default function Contact() {
   </a>
 </p>
 
-          <p><strong>Address:</strong><br />No.163, Vedapatti Road, Krishnapura (Post), Madathukulam (TK), Tamil Nadu.</p>
+          <p><strong>Address:</strong><br />No.163, Vedapatti Road, Krishnapuram (Post), Madathukulam (TK), Tamil Nadu.</p>
         </div>
 
         <div className="contact-form" data-aos="fade-left">
