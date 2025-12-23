@@ -43,16 +43,31 @@ export default function Home() {
  <h2 className="welcome-title" data-aos="fade-up" data-aos-duration="900">
   Welcome to ShreeSaiTraders
 </h2>
-
-
-
-
         <p className="section-text" data-aos="fade-up" data-aos-delay="150">
           ShreeSaiTraders is a reliable supplier of high-quality construction materials,
           including steel, pipes, sheets, cement, roofing solutions, and more.
           With years of experience and customer trust, we offer fast delivery
           and complete project support.
         </p>
+        <br></br>
+        <center>
+        <a
+  href="https://wa.me/919976943630"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <button className="whatsapp-btn">
+    <img
+      src="/assets/whatsapp.gif"
+      alt="WhatsApp"
+      className="whatsapp-icon"
+    />
+    WhatsApp 
+  </button>
+</a>
+</center>
+
+
 
         <br /><br />
 
@@ -143,29 +158,6 @@ export default function Home() {
         shreesaitraderskpm@gmail.com
       </a>
     </p>
-
-    <p>
-      <strong>Instagram:</strong>{" "}
-      <a
-        href="https://www.instagram.com/shreesaitraders_?igsh=dGk3YjNiNDJkdW40"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        shreesaitraders_
-      </a>
-    </p>
-
-    <p>
-      <strong>Facebook:</strong>{" "}
-      <a
-        href="https://www.facebook.com/share/14TPgdTpcTw/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        ShreeSai Traders
-      </a>
-    </p>
-
     <p>
       <strong>Address:</strong><br />
       No.163, Vedapatti Road,<br />
@@ -174,7 +166,40 @@ export default function Home() {
     </p>
   </div>
 
+</div><div className="social-section" data-aos="fade-up">
+  <h2 className="social-title">Social Media</h2>
+
+  <div className="social-icons">
+    <a
+      href="https://www.instagram.com/shreesaitraders_?igsh=dGk3YjNiNDJkdW40"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="/assets/instagram.gif" alt="Instagram" />
+    </a>
+
+    <a
+      href="https://www.facebook.com/share/14TPgdTpcTw/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="/assets/facebook.gif" alt="Facebook" />
+    </a>
+
+    <a
+      href="https://wa.me/919976943630"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <img src="/assets/whatsapp.gif" alt="WhatsApp" />
+    </a>
+
+    <a href="mailto:shreesaitraderskpm@gmail.com">
+      <img src="/assets/email.gif" alt="Email" />
+    </a>
+  </div>
 </div>
+
 
       </div>
     </div>

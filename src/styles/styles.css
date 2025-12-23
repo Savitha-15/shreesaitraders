@@ -1715,3 +1715,69 @@ button, .btn, .btn-primary {
 .carousel-image {
   display: block;
 }
+html, body {
+  font-family: "Cormorant Garamond", serif;
+}
+button,
+input,
+textarea,
+select {
+  font-family: "Cormorant Garamond", serif;
+}
+h1, h2, h3, h4 {
+  font-weight: 600;
+}
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 26px;
+  background-color: #25D366;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45);
+}
+
+.whatsapp-icon {
+  width: 24px;
+  height: 24px;
+}
+.social-section {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.social-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #0b3c5d;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+}
+
+.social-icons img {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.15);
+}
