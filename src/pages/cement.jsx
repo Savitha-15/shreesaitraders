@@ -4,7 +4,8 @@ export default function Cement() {
   const items = [
     { name: "Dalmia Cement", image: "/assets/products/cement/dalmia.jpg" },
     { name: "Chettinad Cement", image: "/assets/products/cement/chettinad.jpg" },
-    { name: "Ramco Cement", image: "/assets/products/cement/ramco.jpg" }
+    { name: "Ramco Cement", image: "/assets/products/cement/ramco.jpg" },
+    { name: "UltraTech Cement", image: "/assets/products/cement/ultratech.jpeg" }
   ];
 
   return (
