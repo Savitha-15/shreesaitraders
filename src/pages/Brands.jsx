@@ -3,7 +3,7 @@ import "../styles/styles.css";
 
 export default function Brands() {
   const brandCategories = [
-    { category: "Steel", brands: ["JSW", "Aishwaryam", "Kaaveri"] },
+    { category: "Steel", brands: ["JSW", "Aishwaryam", "Kaaveri","ASR","Nadi","Bull","Tata"] },
     { category: "Pipe", brands: ["MS Square Pipe", "MS Round Pipe", "GP Pipe", "Angle", "Patta"] },
     { category: "Sheet", brands: ["UPVC","Puffing Sheet","GC Sheet","GP Sheet","CR Sheet","Cement Sheet","Waterproof Cement Sheet","Cooling Sheet"] },
     { category: "Cement", brands: ["Dalmia", "Chettinad", "Ramco"] },

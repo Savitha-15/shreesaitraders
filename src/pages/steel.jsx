@@ -4,7 +4,11 @@ export default function Steel() {
   const items = [
     { name: "JSW Steel", image: "/assets/products/steel/jsw.jpg" },
     { name: "Aishwaryam Steel", image: "/assets/products/steel/aishwaryam.jpg" },
-    { name: "Kaaveri Steel", image: "/assets/products/steel/kaaveri.jpg" }
+    { name: "Kaaveri Steel", image: "/assets/products/steel/kaaveri.jpg" },
+    { name: "ASR Steel", image: "/assets/products/steel/asr.jpg" },
+{ name: "Bull Steel", image: "/assets/products/steel/bull.jpg" },
+{ name: "Tata Steel", image: "/assets/products/steel/tata.jpg" },
+{ name: "Nadi Steel", image: "/assets/products/steel/nadi.jpg" }
   ];
 
   return (
