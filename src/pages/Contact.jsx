@@ -46,7 +46,7 @@ export default function Contact() {
         <div className="contact-form" data-aos="fade-left">
           <h2>Send Us a Message</h2>
 
-          <form action="https://formspree.io/f/mvgeekao" method="POST">
+          <form action="https://formspree.io/f/mreebbgw" method="POST">
             <input type="text" name="name" placeholder="Full Name" required />
             <input type="email" name="email" placeholder="Email Address" required />
             <input type="text" name="phone" placeholder="Phone Number" required />
