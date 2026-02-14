@@ -1,23 +1,32 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import "../styles/styles.css";
 
 export default function About() {
   return (
     <div className="about-page">
 
+      {/* ✅ SEO META (ADDED – CONTENT NOT TOUCHED) */}
+      <Helmet>
+        <title>About Shree Sai Traders | Construction Materials Supplier</title>
+        <meta
+          name="description"
+          content="Shree Sai Traders is a trusted supplier of construction materials including cement, steel, pipes, sheets and roofing solutions, serving residential and commercial projects."
+        />
+      </Helmet>
+
       {/* HEADER SECTION */}
-     <section className="about-hero fade-slide">
+      <section className="about-hero fade-slide">
         <h1>About ShreeSaiTraders</h1>
-        <br></br>
+        <br />
         <p>
           We are a trusted supplier of premium construction materials, delivering quality,
           reliability, and unmatched customer service for all residential and commercial projects.
         </p>
       </section>
 
-
       {/* OUR STORY */}
-    <section className="about-content fade-slide fade-delay-1">
+      <section className="about-content fade-slide fade-delay-1">
         <h2 className="section-heading">Our Story</h2>
 
         <div className="about-grid">
@@ -46,8 +55,10 @@ export default function About() {
           </div>
         </div>
       </section>
-<br></br>
-<br></br>
+
+      <br />
+      <br />
+
       {/* WHAT WE DO */}
       <section className="about-section">
         <h2 className="section-heading">What We Do</h2>
@@ -75,8 +86,10 @@ export default function About() {
           </div>
         </div>
       </section>
-<br></br>
-<br></br>
+
+      <br />
+      <br />
+
       {/* OUR VALUES */}
       <section className="about-section">
         <h2 className="section-heading">Our Values</h2>

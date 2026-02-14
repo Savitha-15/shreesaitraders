@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import Products from "./Products";
-
 
 // Slides
 const slides = [
@@ -14,7 +14,6 @@ const slides = [
 export default function Home() {
   const [current, setCurrent] = useState(0);
 
-  // Auto slide
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
@@ -25,11 +24,25 @@ export default function Home() {
   return (
     <div className="home-container">
 
+      {/* ✅ SEO META */}
+      <Helmet>
+        <title>Shree Sai Traders | Construction & Building Materials Supplier</title>
+        <meta
+          name="description"
+          content="Shree Sai Traders is a trusted supplier of construction and building materials including cement, steel, pipes, sheets and roofing solutions in Tamil Nadu."
+        />
+      </Helmet>
+
+      {/* 🔥 MAIN H1 (VERY IMPORTANT FOR SEO) */}
+      <h1 className="sr-only">
+        Shree Sai Traders – Trusted Construction Materials Supplier
+      </h1>
+
       {/* 🔥 CAROUSEL */}
       <div className="carousel" data-aos="fade-in">
         <img
           src={slides[current].image}
-          alt={`Slide ${current + 1}`}
+          alt="Construction materials supplied by Shree Sai Traders"
           className="carousel-image"
         />
         <div className="carousel-quote" data-aos="fade-up">
@@ -40,58 +53,53 @@ export default function Home() {
       <div className="page-container">
 
         {/* ABOUT */}
- <h2 className="welcome-title" data-aos="fade-up" data-aos-duration="900">
-  Welcome to ShreeSaiTraders
-</h2>
-        <p className="section-text" data-aos="fade-up" data-aos-delay="150">
-          ShreeSaiTraders is a reliable supplier of high-quality construction materials,
-          including steel, pipes, sheets, cement, roofing solutions, and more.
-          With years of experience and customer trust, we offer fast delivery
-          and complete project support.
+        <h2 className="welcome-title" data-aos="fade-up">
+          Welcome to Shree Sai Traders
+        </h2>
+
+        <p className="section-text" data-aos="fade-up">
+          Shree Sai Traders is a reliable supplier of high-quality construction materials,
+          including steel, pipes, sheets, cement, and roofing solutions.
+          We serve residential, commercial, and industrial construction projects
+          with timely delivery and trusted support.
         </p>
-        <br></br>
+
         <center>
-        <a
-  href="https://wa.me/919976943630"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  <button className="whatsapp-btn">
-    <img
-      src="/assets/whatsapp.gif"
-      alt="WhatsApp"
-      className="whatsapp-icon"
-    />
-    WhatsApp 
-  </button>
-</a>
-</center>
-
-
-
-        <br /><br />
+          <a
+            href="https://wa.me/919976943630"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="whatsapp-btn">
+              <img
+                src="/assets/whatsapp.gif"
+                alt="Contact Shree Sai Traders on WhatsApp"
+                className="whatsapp-icon"
+              />
+              WhatsApp
+            </button>
+          </a>
+        </center>
 
         {/* WHERE WE WORK */}
-        <h2 className="section-title" data-aos="fade-up">
-          Where We Work
-        </h2>
+        <h2 className="section-title">Where We Work</h2>
 
         <div className="work-section">
           <div className="work-stats">
 
-            <div className="work-box" data-aos="fade-up">
+            <div className="work-box">
               <h3>100%</h3>
               <p>Employee Owned</p>
             </div>
 
-            <div className="work-box" data-aos="fade-up" data-aos-delay="150">
+            <div className="work-box">
               <h3>1,000+</h3>
               <p>Active Projects</p>
             </div>
 
-            <div className="work-box" data-aos="fade-up" data-aos-delay="300">
+            <div className="work-box">
               <a
-                href="https://maps.app.goo.gl/uunBFHCUwj1VD9JAA?g_st=awb"
+                href="https://maps.app.goo.gl/uunBFHCUwj1VD9JAA"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -102,104 +110,29 @@ export default function Home() {
           </div>
         </div>
 
-        <br /><br />
-
-        {/* =================== SERVICES =================== */}
-        <h2 className="section-title" data-aos="fade-up">Our Services</h2>
-        <p className="section-text" data-aos="fade-up" data-aos-delay="150">
-          We provide complete construction material supply and roofing solutions for residential, commercial, and industrial projects.
-          Our services include the supply of roofing sheets, pipes, rods, cement, and other essential construction materials, ensuring quality and reliability.
-          In addition, we offer professional roofing services using Tata roofing sheets, delivering durable, weather-resistant, and well-finished roofing systems.
-          From material supply to installation, our team ensures proper workmanship and timely project completion.
+        {/* SERVICES */}
+        <h2 className="section-title">Our Services</h2>
+        <p className="section-text">
+          We provide complete construction material supply and professional roofing solutions.
+          Our materials include cement, steel rods, pipes, sheets, and Tata roofing products,
+          ensuring durability, strength, and long-lasting performance.
         </p>
 
-        <br /><br />
+        {/* PRODUCTS */}
+        <Products />
 
-    {/* =================== PRODUCTS =================== */}
-<div className="section-title" data-aos="fade-up">
-<Products />
-</div>
-        <br /><br />
-
-        {/* =================== CONTACT =================== */}
-        <h2 className="section-title" data-aos="fade-up">Contact Us</h2>
-        <p className="section-text" data-aos="fade-up" data-aos-delay="150">
-          {/* You can keep your existing contact content or form here */}
+        {/* CONTACT CTA */}
         <section className="contact-cta">
-  <div className="cta-content">
-    <h2>Let’s Build Something Strong Together</h2>
-    <p>
-      Have questions about our products or need expert guidance?
-      Our team is ready to help you.
-    </p>
+          <h2>Contact Shree Sai Traders</h2>
+          <p>
+            Looking for quality construction materials?
+            Our team is ready to guide you.
+          </p>
 
-
-<Link to="/contact" className="cta-link">
- <button className="cta-btn"
- > Contact Us</button>
-</Link>
-  </div>
-</section>
-        </p>
-        
-<div className="contact-wrapper">
-
-  <div className="contact-info" data-aos="fade-right">
-    <h2>Get in Touch</h2>
-
-    <p>
-      <strong>Phone:</strong>{" "}
-      <a href="tel:+919976943630">+91 9976943630</a>
-    </p>
-
-    <p>
-      <strong>Email:</strong>{" "}
-      <a href="mailto:shreesaitraderskpm@gmail.com">
-        shreesaitraderskpm@gmail.com
-      </a>
-    </p>
-    <p>
-      <strong>Address:</strong><br />
-      No.163, Vedapatti Road,<br />
-      Krishnapura (Post), Madathukulam (TK),<br />
-      Tamil Nadu.
-    </p>
-  </div>
-
-</div><div className="social-section" data-aos="fade-up">
-  <h2 className="social-title">Social Media</h2>
-
-  <div className="social-icons">
-    <a
-      href="https://www.instagram.com/shreesaitraders_?igsh=dGk3YjNiNDJkdW40"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img src="/assets/instagram.gif" alt="Instagram" />
-    </a>
-
-    <a
-      href="https://www.facebook.com/share/14TPgdTpcTw/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img src="/assets/facebook.gif" alt="Facebook" />
-    </a>
-
-    <a
-      href="https://wa.me/919976943630"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <img src="/assets/whatsapp.gif" alt="WhatsApp" />
-    </a>
-
-    <a href="mailto:shreesaitraderskpm@gmail.com">
-      <img src="/assets/email.gif" alt="Email" />
-    </a>
-  </div>
-</div>
-
+          <Link to="/contact">
+            <button className="cta-btn">Contact Us</button>
+          </Link>
+        </section>
 
       </div>
     </div>
